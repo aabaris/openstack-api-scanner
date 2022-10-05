@@ -8,16 +8,16 @@ name: Docker
 
 on:
   push:
-    branches: [ main ]
+    branches: [main]
     # Publish semver tags as releases.
-    tags: [ 'v*.*.*' ]
+    tags: ['v*.*.*']
     paths:
       - ".github/workflows/docker.yaml"
       - "src/**"
       - "requirements.txt"
       - "Dockerfile"
   pull_request:
-    branches: [ main ]
+    branches: [main]
 
 env:
   # Use docker.io for Docker Hub if empty
