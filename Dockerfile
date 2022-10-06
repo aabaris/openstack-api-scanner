@@ -16,7 +16,7 @@ RUN pip3 install -r /tmp/requirements.txt
 
 RUN python3 -m venv /opt/venv
 
-COPY src/bin/openstack-api-backup.sh /opt/venv/bin
+COPY src/bin/openstack-api-main.sh /opt/venv/bin
 
 # Final Image
 FROM python:3.9-slim-bullseye
@@ -27,4 +27,4 @@ ENV PATH="/opt/venv/bin:$PATH"
 
 USER 1001
 
-CMD [ "echo hello" ]
+CMD [ "/opt/venv/bin/openstack-api-main.sh" ]
