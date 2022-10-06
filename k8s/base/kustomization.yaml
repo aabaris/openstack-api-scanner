@@ -1,3 +1,4 @@
 ---
 resources:
   - namespace.yaml
+  - openstack-api-scanner-cron.yaml
